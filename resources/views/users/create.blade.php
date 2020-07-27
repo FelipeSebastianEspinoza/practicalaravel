@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        {!! Form::open(['method' => 'POST','action'=>'UserController@store']) !!}
-         
-        {!! Form::token(); !!}
+    <div class="container container-sm">
+        {!! Form::open(['method' => 'POST', 'action' => 'UserController@store', 'files' => true]) !!}
+
+        {!! Form::token() !!}
         <div class="form-group">
             <label for="nombre">Name</label>
             <input id="nombre" class="form-control" type="text" name="name" value="">
@@ -30,7 +30,7 @@
             <input id="foto" class="form-control" type="file" name="ruta_foto" value="">
         </div>
         <button class="btn btn-primary" type="submit">Registrar</button>
-       
+
         {!! Form::reset('Borrar campos') !!}
         {!! Form::close() !!}
     </div>

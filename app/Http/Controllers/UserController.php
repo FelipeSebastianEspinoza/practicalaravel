@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
- 
+use App\Foto;
 class UserController extends Controller
 {
  
@@ -23,8 +23,19 @@ class UserController extends Controller
   
     public function store(Request $request)
     {
-        User::create($request->all());
-        return redirect('/admin/users');
+        $entrada=$request->all();
+
+        if ($archivo=$request->file('ruta_foto')) {
+           $nombre=$archivo->getClientOriginalName();
+           $archivo->move('images',$nombre);
+           $foto=Foto::create(['ruta_foto'=>$nombre]);
+           $entrada['ruta_foto']=$foto->id;
+        }else{
+            User::create($entrada);
+        }
+        
+       /* User::create($request->all());
+        return redirect('/admin/users'); */
     }
 
   
