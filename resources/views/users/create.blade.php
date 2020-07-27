@@ -23,9 +23,12 @@
         </div>
         <div class="form-group">
             <label for="nombre">Role</label>
-            <input id="nombre" class="form-control" type="text" name="role" value="">
+            <input id="nombre" class="form-control" type="text" name="role_id" value="">
         </div>
-
+        <div class="form-group">
+            <label for="nombre">Foto</label>
+            <input id="foto" class="form-control" type="file" name="ruta_foto" value="">
+        </div>
         <button class="btn btn-primary" type="submit">Registrar</button>
        
         {!! Form::reset('Borrar campos') !!}
