@@ -14,7 +14,7 @@ class AddFotoUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-           $table->string('ruta_foto');
+           $table->string('foto_id');
         });
     }
 
@@ -23,10 +23,5 @@ class AddFotoUsers extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('ruta_foto');
-        });
-    }
+   
 }

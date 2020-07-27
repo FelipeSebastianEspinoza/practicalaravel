@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
             <label for="nombre">Foto</label>
-            <input id="foto" class="form-control" type="file" name="ruta_foto" value="">
+            <input id="foto" class="form-control" type="file" name="foto_id" value="">
         </div>
         <button class="btn btn-primary" type="submit">Registrar</button>
 
