@@ -15,3 +15,5 @@ Route::resource('/admin/user', 'UserController');
 Route::get('/admin/create', 'UserController@create');
  
  
+ 
+ 
