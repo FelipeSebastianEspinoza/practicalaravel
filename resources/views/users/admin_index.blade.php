@@ -21,10 +21,10 @@
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
                         @if ($user->foto)
-                        <td><img src="/images/{{$user->foto ? $user->foto->ruta_foto : '-' }}" width="100"> </td>
+                        <td><img src="/images/{{ $user->foto->ruta_foto  }}" width="100"> </td>
                         @else
                         <td>
-                            <img src="/images/screenshot_3.jpg" width="100"> 
+                            <img src="/images/screenshot_4.jpg" width="100"> 
  
                         </td>
                         @endif
