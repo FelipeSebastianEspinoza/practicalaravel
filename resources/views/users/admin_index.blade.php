@@ -6,6 +6,7 @@
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
+                <th>Foto</th>
                 <th>Email</th>
                 <th>Role_id</th>
                 <th>F.Creado</th>
@@ -18,6 +19,12 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>{{ $user->name }}</td>
+                        @if ($user->foto)
+                        <td><img src="/images/{{$user->foto ? $user->foto->ruta_foto : '-' }}" width="100"> </td>
+                        @else
+                        <td>Sin imagen </td>
+                        @endif
+                         
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->role_id }}</td>
                         <td>{{ $user->created_at }}</td>
